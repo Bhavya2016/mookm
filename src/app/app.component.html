@@ -1,0 +1,67 @@
+<igx-navbar class="navbar">
+  <igx-navbar-action>
+    <button igxRipple igxIconButton="flat" class="icon-button">
+      <igx-icon>
+        menu
+      </igx-icon>
+    </button>
+  </igx-navbar-action>
+  <igx-navbar-title class="navbar-content">
+    <h6 class="h6">
+      MOOAM
+    </h6>
+    <button igxButton="flat" igxRipple class="button">
+      Button
+    </button>
+    <button igxButton="flat" igxRipple class="button">
+      Button
+    </button>
+  </igx-navbar-title>
+  <button igxRipple igxIconButton="flat" class="icon-button">
+    <igx-icon>
+      search
+    </igx-icon>
+  </button>
+  <button igxRipple igxIconButton="flat" class="icon-button">
+    <igx-icon>
+      favorite
+    </igx-icon>
+  </button>
+  <button igxRipple igxIconButton="flat" class="icon-button">
+    <igx-icon>
+      more_vert
+    </igx-icon>
+  </button>
+</igx-navbar>
+<div class="row-layout group">
+  <igx-nav-drawer [pin]="true" width="320px" class="nav-drawer">
+    <ng-template igxDrawerMini>
+      <div igxDrawerItem igxRipple routerLink="/view1">
+        <igx-icon class="icon">
+          account_circle
+        </igx-icon>
+      </div>
+      <div igxDrawerItem igxRipple routerLink="/view2">
+        <igx-icon class="icon">
+          assignment_turned_in
+        </igx-icon>
+      </div>
+      <div igxDrawerItem igxRipple routerLink="/view3">
+        <igx-icon class="icon">
+          assessment
+        </igx-icon>
+      </div>
+    </ng-template>
+    <ng-template igxDrawer>
+      <div igxDrawerItem igxRipple>
+        <igx-icon class="icon">
+          account_circle
+        </igx-icon>
+        <span>Title goes here</span>
+      </div>
+    </ng-template>
+  </igx-nav-drawer>
+  <div class="view-container">
+    <router-outlet></router-outlet>
+  </div>
+</div>
